@@ -9,10 +9,16 @@ using namespace std;
 
 class Color {
     public:
+        //Default constructor
         Color() { r = 0; g = 0; b = 0; }
-        Color(int r) { this->r = 0; g = 0; b = 0; }
+
+        //Partial constructors
+        Color(int r) { this->r = r; g = 0; b = 0; }
         Color(int r, int g): r(r), g(g), b(0) { }
+
+        //Full parameter constructor
         Color(int r, int g, int b): r(r), g(g), b(b) { }
+
         //getters & setters
         void setR(int r) { this->r = r; }
         void setG(int g) { this->g = g; }
@@ -33,42 +39,21 @@ class Color {
 };
 
 int main() {
+    //Populate colors using a variety of constructors
+
+    //Partial constructors
     Color red(255);
     Color orange(255, 150); 
-    Color yellow, green, blue, purple, white, black;
-    
-    //Fill colors
-    red.setR(255);
-    red.setG(0);
-    red.setB(0);
+    Color yellow(255, 255); 
+    Color green(0, 255); 
 
-    orange.setR(255);
-    orange.setG(150);
-    orange.setB(0);
+    //Full constructors
+    Color blue(0, 0, 255);
+    Color purple(150, 0, 255); 
+    Color white(255, 255, 255);
 
-    yellow.setR(255);
-    yellow.setG(255);
-    yellow.setB(0);
-
-    green.setR(0);
-    green.setG(255);
-    green.setB(0);
-
-    blue.setR(0);
-    blue.setB(255);
-    blue.setG(0);
-
-    purple.setR(150);
-    purple.setB(255);
-    purple.setG(0);
-
-    white.setR(255);
-    white.setG(255);
-    white.setB(255);
-
-    black.setR(0);
-    black.setG(0);
-    black.setB(0);
+    //Default constructor
+    Color black;
 
     //Output colors
     red.print();
