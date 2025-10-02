@@ -9,6 +9,10 @@ using namespace std;
 
 class Color {
     public:
+        Color() { r = 0; g = 0; b = 0; }
+        Color(int r) { this->r = 0; g = 0; b = 0; }
+        Color(int r, int g): r(r), g(g), b(0) { }
+        Color(int r, int g, int b): r(r), g(g), b(b) { }
         //getters & setters
         void setR(int r) { this->r = r; }
         void setG(int g) { this->g = g; }
@@ -29,7 +33,9 @@ class Color {
 };
 
 int main() {
-    Color red, orange, yellow, green, blue, purple, white, black;
+    Color red(255);
+    Color orange(255, 150); 
+    Color yellow, green, blue, purple, white, black;
     
     //Fill colors
     red.setR(255);
